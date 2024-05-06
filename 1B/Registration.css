@@ -1,0 +1,16 @@
+.RegistrationForm{
+    height: 480px;
+    width: 420px;
+    margin-top: 40px;
+    margin-left: 410px;
+    background-color: rgb(137, 243, 243);
+}
+.formclass{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 35px;
+}
+#registerbtn{
+    margin-top: 30px;
+    margin-left: 140px;
+}

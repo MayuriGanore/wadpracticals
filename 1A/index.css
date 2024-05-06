@@ -1,0 +1,55 @@
+.left-corner{
+    height:584px;
+    width: 300px;
+    background-color: rgb(128, 128, 255);
+}
+.menu{
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-style: italic;
+    color: white;
+    text-decoration: underline;
+}
+.menu:hover{
+    text-decoration: none;
+    color: black;
+}
+.listitems{
+    list-style: none;
+}
+.listitem{
+    padding-top: 10px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 19px;
+}
+.listitem:hover{
+    color: white;
+}
+.right-corner{
+    width: 980px;
+    height: 80px;
+    margin-left: 300px;
+    margin-top: -584px;
+    border-bottom: 2px solid black;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.clgname{
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-style: italic;
+    color: rgb(128, 128, 255);
+}
+#btnadduser{
+    margin-left: 170px;
+    margin-top: -5px;
+}
+.tableright{
+    margin-left: 340px;
+    margin-top: 50px;
+    width: 900px;
+    border: 1px solid black;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}

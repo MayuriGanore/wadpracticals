@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link href="Registration.css" rel="stylesheet" />
+    <link href="Profile.html" rel="script"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="RegistrationForm">
+      <div class="formclass">
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingname"
+            placeholder="Name"
+          />
+          <label for="floatingname">Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingsurname"
+            placeholder="Surname"
+          />
+          <label for="floatingsurname">Surname</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="number"
+            class="form-control"
+            id="floatingcontact"
+            placeholder="Contact"
+          />
+          <label for="floatingcontact">Contact</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="email"
+            class="form-control"
+            id="floatingemail"
+            placeholder="+91"
+          />
+          <label for="floatingemail">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input
+            type="password"
+            class="form-control"
+            id="floatingPassword"
+            placeholder="Password"
+          />
+          <label for="floatingPassword">Password</label>
+        </div>
+        <button class="btn btn-primary" id="registerbtn" onclick="SaveData()">Register</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    function SaveData(){
+        const name=document.getElementById("floatingname").value;
+        const surname=document.getElementById("floatingsurname").value;
+        const email=document.getElementById("floatingcontact").value;
+        const contact=document.getElementById("floatingemail").value;
+        const password=document.getElementById("floatingPassword").value;
+
+        if(!name || !surname || !email || !contact || !password){
+            alert("Please Enter All Fields!!")
+            return;
+        }
+        const records=JSON.parse(localStorage.getItem("users"))||[]
+        records.push({
+            floatingname:name,
+            floatingsurname:surname,
+            floatingcontact:contact,
+            floatingemail:email,
+            floatingpassword:password,
+        });
+        localStorage.setItem("users",JSON.stringify(records));
+        alert("Registered User Successfully!!")
+        window.location.href="Profile.html";
+    }
+  </script>
+</html>
